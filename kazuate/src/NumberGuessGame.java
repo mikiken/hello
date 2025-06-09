@@ -7,7 +7,7 @@ public class NumberGuessGame {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("数あてゲームを始めます！（2桁の正の整数を当ててください）");
+        System.out.println("数あてゲームを始めます！（2桁の正の整数を当ててください！）");
 
         for (int i = 1; i <= MAX_TRIES; i++) {
             System.out.print(i + "回目の入力: ");
@@ -15,7 +15,7 @@ public class NumberGuessGame {
 
             // 入力が2桁の正の整数でない場合は無効とする
             if (guess < 10 || guess > 99) {
-                System.out.println("無効な入力です。2桁の正の整数を入力してください。");
+                System.out.println("無効な入力です！2桁の正の整数を入力してください！");
                 i--; // 試行回数はカウントしない
                 continue;
             }
@@ -26,19 +26,19 @@ public class NumberGuessGame {
             } else {
                 int diff = Math.abs(guess - ANSWER);
                 if (guess < ANSWER) {
-                    System.out.print("設定された数はもっと大きいです。");
+                    System.out.print("設定された数はもっと大きいです！");
                 } else {
-                    System.out.print("設定された数はもっと小さいです。");
+                    System.out.print("設定された数はもっと小さいです！");
                 }
 
                 if (diff >= 20) {
-                    System.out.print("（差が20以上あります）");
+                    System.out.print("（差が20以上あります！）");
                 }
                 System.out.println();
             }
 
             if (i == MAX_TRIES) {
-                System.out.println("残念！正解は " + ANSWER + " でした。");
+                System.out.println("残念！正解は " + ANSWER + " でした！");
             }
         }
 
